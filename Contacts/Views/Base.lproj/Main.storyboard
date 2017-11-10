@@ -36,9 +36,71 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="sBf-NS-45g" kind="show" identifier="contactDetailSegue" id="zWn-8b-Prh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Contact Detail View Controller-->
+        <scene sceneID="Oim-h5-ejJ">
+            <objects>
+                <viewController id="sBf-NS-45g" customClass="ContactDetailViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hHS-I1-B7A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPl-cS-rNs">
+                                <rect key="frame" x="5" y="70" width="365" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaO-ee-XlA">
+                                <rect key="frame" x="5" y="191" width="365" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMy-iR-g5y">
+                                <rect key="frame" x="5" y="322" width="365" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqJ-yS-cmY">
+                                <rect key="frame" x="170" y="576" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="sBf-NS-45g" eventType="touchUpInside" id="ak4-Tg-XnG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dqE-le-RAI" firstAttribute="trailing" secondItem="UMy-iR-g5y" secondAttribute="trailing" constant="5" id="1Er-uk-s58"/>
+                            <constraint firstItem="dqE-le-RAI" firstAttribute="trailing" secondItem="wPl-cS-rNs" secondAttribute="trailing" constant="5" id="1lx-c6-nPm"/>
+                            <constraint firstItem="dqE-le-RAI" firstAttribute="trailing" secondItem="HaO-ee-XlA" secondAttribute="trailing" constant="5" id="CiC-Qs-VIw"/>
+                            <constraint firstItem="wPl-cS-rNs" firstAttribute="leading" secondItem="dqE-le-RAI" secondAttribute="leading" constant="5" id="KV0-gv-pm4"/>
+                            <constraint firstItem="HaO-ee-XlA" firstAttribute="leading" secondItem="dqE-le-RAI" secondAttribute="leading" constant="5" id="MSD-Np-9Uv"/>
+                            <constraint firstItem="wPl-cS-rNs" firstAttribute="top" secondItem="dqE-le-RAI" secondAttribute="top" constant="50" id="fv9-jS-UMi"/>
+                            <constraint firstItem="HaO-ee-XlA" firstAttribute="top" secondItem="wPl-cS-rNs" secondAttribute="bottom" constant="100" id="neZ-Rt-zCj"/>
+                            <constraint firstItem="UMy-iR-g5y" firstAttribute="top" secondItem="HaO-ee-XlA" secondAttribute="bottom" constant="110" id="sAo-sf-GSc"/>
+                            <constraint firstItem="UMy-iR-g5y" firstAttribute="leading" secondItem="dqE-le-RAI" secondAttribute="leading" constant="5" id="u99-iI-Asr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dqE-le-RAI"/>
+                    </view>
+                    <connections>
+                        <outlet property="ageLabel" destination="HaO-ee-XlA" id="1g1-HS-7H4"/>
+                        <outlet property="infoLabel" destination="UMy-iR-g5y" id="Sl4-Fb-bJR"/>
+                        <outlet property="nameLabel" destination="wPl-cS-rNs" id="vWf-96-TYY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z2s-MN-WIx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1509.5999999999999" y="32.833583208395808"/>
         </scene>
     </scenes>
 </document>

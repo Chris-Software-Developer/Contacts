@@ -14,6 +14,7 @@
 		0D0406061FB4128E00B75D49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D0406051FB4128E00B75D49 /* Assets.xcassets */; };
 		0D0406091FB4128E00B75D49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D0406071FB4128E00B75D49 /* LaunchScreen.storyboard */; };
 		0D0406151FB418E600B75D49 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0406141FB418E600B75D49 /* Person.swift */; };
+		0D98B4F31FB5082900CC735D /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D98B4F21FB5082900CC735D /* ContactDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0D0406081FB4128E00B75D49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D04060A1FB4128E00B75D49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D0406141FB418E600B75D49 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		0D98B4F21FB5082900CC735D /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				0D0405FD1FB4128E00B75D49 /* ViewController.swift */,
+				0D98B4F21FB5082900CC735D /* ContactDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D0405FE1FB4128E00B75D49 /* ViewController.swift in Sources */,
+				0D98B4F31FB5082900CC735D /* ContactDetailViewController.swift in Sources */,
 				0D0405FC1FB4128E00B75D49 /* AppDelegate.swift in Sources */,
 				0D0406151FB418E600B75D49 /* Person.swift in Sources */,
 				0D0406041FB4128E00B75D49 /* Contacts.xcdatamodeld in Sources */,
