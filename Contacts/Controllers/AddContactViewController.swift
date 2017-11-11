@@ -13,4 +13,12 @@ class AddContactViewController: UIViewController {
     @IBOutlet weak var contactNameTextField: UITextField!
     @IBOutlet weak var contactAgeTextField: UITextField!
     @IBOutlet weak var contactAboutTextField: UITextField!
+    
+    @IBAction func saveButtonPressed(_ sender: Any) {
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "Add Contact"
+    }
 }

@@ -105,6 +105,7 @@
         <!--Add Contact View Controller-->
         <scene sceneID="EBZ-ce-ghy">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="smL-OY-Ojk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="RF7-87-WVK" customClass="AddContactViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FJe-gz-3Ew">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -143,13 +144,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bNP-Vz-D6l"/>
                     </view>
+                    <navigationItem key="navigationItem" id="KQD-fK-VQO">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="6pP-C1-mPb">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="RF7-87-WVK" id="q0p-aS-Yae"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="contactAboutTextField" destination="71v-DU-y7g" id="tCP-Y7-N5u"/>
                         <outlet property="contactAgeTextField" destination="bdd-Ke-A16" id="Qzd-OG-u4W"/>
                         <outlet property="contactNameTextField" destination="LRA-td-uDu" id="reT-dH-NDs"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="smL-OY-Ojk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1062" y="925"/>
         </scene>
