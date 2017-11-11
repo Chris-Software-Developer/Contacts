@@ -10,7 +10,7 @@ import UIKit
 
 class ContactDetailViewController: UIViewController {
     
-    var person: Person?
+    var contact: Contact?
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
@@ -18,16 +18,16 @@ class ContactDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        guard let person = person else {
-            print("Error: No Person Available")
+        guard let contact = contact else {
+            print("Error: No Contact Available")
             return
         }
         
-        self.title = person.name
+        self.title = contact.name
         
-        self.nameLabel.text = person.name
-        self.ageLabel.text = "\(person.age)"
-        self.infoLabel.text = person.about
+        self.nameLabel.text = contact.name
+        self.ageLabel.text = "\(contact.age)"
+        self.infoLabel.text = contact.about
     }
 }
 

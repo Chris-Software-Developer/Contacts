@@ -10,29 +10,29 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var contactForSegue: Person?
+    var contactForSegue: Contact?
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Person.mockData.count
+        return Contact.mockData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell()
         
-        let person = Person.mockData[indexPath.row]
-        cell.textLabel?.text = person.name
+        let contact = Contact.mockData[indexPath.row]
+        cell.textLabel?.text = contact.name
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let person = Person.mockData[indexPath.row]
-        self.contactForSegue = person
+        let contact = Contact.mockData[indexPath.row]
+        self.contactForSegue = contact
         
         self.performSegue(withIdentifier: "contactDetailSegue", sender: nil)
     }
@@ -47,7 +47,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         if segue.identifier == "contactDetailSegue" {
             
             let controller = segue.destination as! ContactDetailViewController
-            controller.person = contact
+            controller.contact = contact
         }
     }
 }
