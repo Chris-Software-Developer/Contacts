@@ -14,7 +14,7 @@ class ContactDetailViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
-    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var aboutLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -27,7 +27,7 @@ class ContactDetailViewController: UIViewController {
         
         self.nameLabel.text = contact.name
         self.ageLabel.text = "\(contact.age)"
-        self.infoLabel.text = contact.about
+        self.aboutLabel.text = contact.about
     }
 }
 

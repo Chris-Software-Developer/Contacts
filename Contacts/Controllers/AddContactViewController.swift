@@ -9,4 +9,8 @@
 import UIKit
 
 class AddContactViewController: UIViewController {
+    
+    @IBOutlet weak var contactNameTextField: UITextField!
+    @IBOutlet weak var contactAgeTextField: UITextField!
+    @IBOutlet weak var contactAboutTextField: UITextField!
 }

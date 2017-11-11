@@ -61,7 +61,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaO-ee-XlA">
-                                <rect key="frame" x="172" y="323" width="30" height="21"/>
+                                <rect key="frame" x="172.5" y="323" width="30" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -93,8 +93,8 @@
                         <viewLayoutGuide key="safeArea" id="dqE-le-RAI"/>
                     </view>
                     <connections>
+                        <outlet property="aboutLabel" destination="UMy-iR-g5y" id="bG3-mR-pQc"/>
                         <outlet property="ageLabel" destination="HaO-ee-XlA" id="1g1-HS-7H4"/>
-                        <outlet property="infoLabel" destination="UMy-iR-g5y" id="Sl4-Fb-bJR"/>
                         <outlet property="nameLabel" destination="wPl-cS-rNs" id="vWf-96-TYY"/>
                     </connections>
                 </viewController>
@@ -102,16 +102,52 @@
             </objects>
             <point key="canvasLocation" x="1824.8" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Contact View Controller-->
         <scene sceneID="EBZ-ce-ghy">
             <objects>
-                <viewController id="RF7-87-WVK" sceneMemberID="viewController">
+                <viewController id="RF7-87-WVK" customClass="AddContactViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FJe-gz-3Ew">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LRA-td-uDu">
+                                <rect key="frame" x="16" y="272.5" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bdd-Ke-A16">
+                                <rect key="frame" x="16" y="318.5" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="About" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="71v-DU-y7g">
+                                <rect key="frame" x="16" y="364.5" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bdd-Ke-A16" firstAttribute="centerY" secondItem="FJe-gz-3Ew" secondAttribute="centerY" id="0nz-H7-rra"/>
+                            <constraint firstItem="LRA-td-uDu" firstAttribute="leading" secondItem="bNP-Vz-D6l" secondAttribute="leading" constant="16" id="NHe-Wp-WOQ"/>
+                            <constraint firstItem="bNP-Vz-D6l" firstAttribute="trailing" secondItem="bdd-Ke-A16" secondAttribute="trailing" constant="16" id="Nh3-T8-VHU"/>
+                            <constraint firstItem="bNP-Vz-D6l" firstAttribute="trailing" secondItem="71v-DU-y7g" secondAttribute="trailing" constant="16" id="Tbs-1w-fBs"/>
+                            <constraint firstItem="71v-DU-y7g" firstAttribute="top" secondItem="bdd-Ke-A16" secondAttribute="bottom" constant="16" id="eW6-xU-JTP"/>
+                            <constraint firstItem="71v-DU-y7g" firstAttribute="leading" secondItem="bNP-Vz-D6l" secondAttribute="leading" constant="16" id="fFS-bj-4iz"/>
+                            <constraint firstItem="bdd-Ke-A16" firstAttribute="top" secondItem="LRA-td-uDu" secondAttribute="bottom" constant="16" id="kHm-NO-cs3"/>
+                            <constraint firstItem="bdd-Ke-A16" firstAttribute="leading" secondItem="bNP-Vz-D6l" secondAttribute="leading" constant="16" id="tnF-5f-VNN"/>
+                            <constraint firstItem="bNP-Vz-D6l" firstAttribute="trailing" secondItem="LRA-td-uDu" secondAttribute="trailing" constant="16" id="v6K-Qg-jnz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bNP-Vz-D6l"/>
                     </view>
+                    <connections>
+                        <outlet property="contactAboutTextField" destination="71v-DU-y7g" id="tCP-Y7-N5u"/>
+                        <outlet property="contactAgeTextField" destination="bdd-Ke-A16" id="Qzd-OG-u4W"/>
+                        <outlet property="contactNameTextField" destination="LRA-td-uDu" id="reT-dH-NDs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="smL-OY-Ojk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
