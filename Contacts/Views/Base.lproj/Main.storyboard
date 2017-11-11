@@ -36,9 +36,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="z8S-DE-loI"/>
+                    <navigationItem key="navigationItem" id="z8S-DE-loI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="BJ9-xc-tIp">
+                            <connections>
+                                <action selector="addContactButtonPushed:" destination="BYZ-38-t0r" id="abs-m6-y5d"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <segue destination="sBf-NS-45g" kind="show" identifier="contactDetailSegue" id="zWn-8b-Prh"/>
+                        <segue destination="sBf-NS-45g" kind="show" identifier="contactDetailSegueID" id="zWn-8b-Prh"/>
+                        <segue destination="RF7-87-WVK" kind="show" identifier="addContactSegueID" id="ooV-KI-IiA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -94,6 +101,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z2s-MN-WIx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1824.8" y="133.5832083958021"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EBZ-ce-ghy">
+            <objects>
+                <viewController id="RF7-87-WVK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FJe-gz-3Ew">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bNP-Vz-D6l"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="smL-OY-Ojk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1062" y="925"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gnc-di-VQL">

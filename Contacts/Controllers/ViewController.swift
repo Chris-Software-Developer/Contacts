@@ -11,6 +11,11 @@ import UIKit
 class ViewController: UIViewController {
     
     var contactForSegue: Contact?
+    
+    @IBAction func addContactButtonPushed(_ sender: Any) {
+        self.performSegue(withIdentifier: "addContactSegueID", sender: nil)
+        
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -34,17 +39,17 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let contact = Contact.mockData[indexPath.row]
         self.contactForSegue = contact
         
-        self.performSegue(withIdentifier: "contactDetailSegue", sender: nil)
+        self.performSegue(withIdentifier: "contactDetailSegueID", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        guard let contact = self.contactForSegue else {
-            print("Could not get contact.")
-            return
-        }
-        
-        if segue.identifier == "contactDetailSegue" {
+        if segue.identifier == "contactDetailSegueID" {
+            
+            guard let contact = self.contactForSegue else {
+                print("Could not get contact.")
+                return
+            }
             
             let controller = segue.destination as! ContactDetailViewController
             controller.contact = contact
