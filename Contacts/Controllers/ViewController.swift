@@ -12,10 +12,17 @@ class ViewController: UIViewController {
     
     var contactForSegue: Contact?
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.reloadData()
+    }
+    
     @IBAction func addContactButtonPushed(_ sender: Any) {
         self.performSegue(withIdentifier: "addContactSegueID", sender: nil)
-        
     }
+    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -27,8 +34,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell()
-        
         let contact = Contact.mockData[indexPath.row]
+
         cell.textLabel?.text = contact.name
         
         return cell

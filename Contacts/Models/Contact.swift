@@ -12,7 +12,7 @@ class Contact {
     var age: Int
     var about: String
     
-    static let mockData = [Contact.init(name: "David Seitz Jr", age: 28, about: "iOS Developer in San Francisco"),
+    static var mockData = [Contact.init(name: "David Seitz Jr", age: 28, about: "iOS Developer in San Francisco"),
                            Contact.init(name: "Chris Smith", age: 27, about: "iOS Developer in Las Vegas"),
                            Contact.init(name: "Tracer", age: 25, about: "Speedy shooter"),
                            Contact.init(name: "Widowmaker", age: 30, about: "Sharp shooter"),

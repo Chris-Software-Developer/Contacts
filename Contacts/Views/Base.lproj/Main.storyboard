@@ -44,6 +44,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tableView" destination="PlX-Nh-Bq0" id="YOy-Ih-3W8"/>
                         <segue destination="sBf-NS-45g" kind="show" identifier="contactDetailSegueID" id="zWn-8b-Prh"/>
                         <segue destination="RF7-87-WVK" kind="show" identifier="addContactSegueID" id="ooV-KI-IiA"/>
                     </connections>
@@ -123,7 +124,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="About" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="71v-DU-y7g">
+                            <textField opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="About" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="71v-DU-y7g" userLabel="Contact About Text Field">
                                 <rect key="frame" x="16" y="364.5" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -152,6 +153,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="contactAboutTextField" destination="71v-DU-y7g" id="xFV-3o-fuu"/>
                         <outlet property="contactAgeTextField" destination="bdd-Ke-A16" id="Qzd-OG-u4W"/>
                         <outlet property="contactNameTextField" destination="LRA-td-uDu" id="reT-dH-NDs"/>
                     </connections>
