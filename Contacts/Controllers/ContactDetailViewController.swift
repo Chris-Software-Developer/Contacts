@@ -23,12 +23,11 @@ class ContactDetailViewController: UIViewController {
             return
         }
         
+        self.title = person.name
+        
         self.nameLabel.text = person.name
         self.ageLabel.text = "\(person.age)"
         self.infoLabel.text = person.about
     }
-    
-    @IBAction func backButtonPressed(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
 }
+
