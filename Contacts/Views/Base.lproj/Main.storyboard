@@ -106,7 +106,6 @@
         <!--Add Contact View Controller-->
         <scene sceneID="EBZ-ce-ghy">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="smL-OY-Ojk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="RF7-87-WVK" customClass="AddContactViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FJe-gz-3Ew">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -122,7 +121,7 @@
                                 <rect key="frame" x="16" y="318.5" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="About" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="71v-DU-y7g" userLabel="Contact About Text Field">
                                 <rect key="frame" x="16" y="364.5" width="343" height="30"/>
@@ -158,6 +157,7 @@
                         <outlet property="contactNameTextField" destination="LRA-td-uDu" id="reT-dH-NDs"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="smL-OY-Ojk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1062" y="925"/>
         </scene>

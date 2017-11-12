@@ -100,4 +100,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         self.performSegue(withIdentifier: "contactDetailSegueID", sender: nil)
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            let contact = self.contacts[indexPath.row]
+            CoreData.context.delete(contact)
+            try? CoreData.context.save()
+            self.contacts.remove(at: indexPath.row)
+            self.tableView.reloadData()
+        }
+    }
 }
