@@ -13,9 +13,9 @@ class ViewController: UIViewController {
     
     // MARK: Properties
     
-    var contactForSegue: ContactDetails?
+    var contactForSegue: Contact?
     
-    var contacts = [ContactDetails]() {
+    var contacts = [Contact]() {
         didSet {
             self.tableView.reloadData()
         }
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
     
     private func fetchContacts() {
         
-        let fetchRequest: NSFetchRequest<ContactDetails> = ContactDetails.fetchRequest()
+        let fetchRequest: NSFetchRequest<Contact> = Contact.fetchRequest()
         
         do {
             let contacts = try CoreData.context.fetch(fetchRequest)

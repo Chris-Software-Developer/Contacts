@@ -14,6 +14,11 @@ class AddContactViewController: UIViewController {
     @IBOutlet weak var contactAgeTextField: UITextField!
     @IBOutlet weak var contactAboutTextField: UITextField!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "Add Contact"
+    }
+    
     @IBAction func saveButtonPressed(_ sender: Any) {
         
         guard
@@ -25,30 +30,23 @@ class AddContactViewController: UIViewController {
                 return
         }
         
-        let newContact = Contact(name: name, age: age, about: about)
+        let newContact = Contact(context: CoreData.context)
         
-        self.saveContact(contact: newContact)
-    
+        newContact.name = name
+        newContact.age = Int16(age)
+        newContact.about = about
+        
+        self.saveContext()
+        
         self.navigationController?.popViewController(animated: true)
     }
     
-    private func saveContact(contact: Contact) {
-        
-        let contactDetails = ContactDetails(context: CoreData.context)
-        
-        contactDetails.name = contact.name
-        contactDetails.age = Int16(contact.age)
-        contactDetails.about = contact.about
+    private func saveContext() {
         
         do {
             try CoreData.context.save()
         } catch let error {
             print("Error while saving new contact: \(error.localizedDescription)")
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.title = "Add Contact"
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ContactDetails+CoreDataProperties.swift
+//  Contact+CoreDataProperties.swift
 //  Contacts
 //
 //  Created by Christopher Smith on 11/11/17.
@@ -10,13 +10,15 @@
 import Foundation
 import CoreData
 
-extension ContactDetails {
-    
+
+extension Contact {
+
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Contact> {
+        return NSFetchRequest<Contact>(entityName: "Contact")
+    }
+
     @NSManaged public var name: String?
     @NSManaged public var age: Int16
     @NSManaged public var about: String?
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<ContactDetails> {
-        return NSFetchRequest<ContactDetails>(entityName: "ContactDetails")
-    }
 }

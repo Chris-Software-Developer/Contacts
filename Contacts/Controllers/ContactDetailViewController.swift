@@ -10,7 +10,7 @@ import UIKit
 
 class ContactDetailViewController: UIViewController {
     
-    var contact: ContactDetails?
+    var contact: Contact?
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
