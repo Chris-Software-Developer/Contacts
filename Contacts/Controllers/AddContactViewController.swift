@@ -27,11 +27,24 @@ class AddContactViewController: UIViewController {
         
         let newContact = Contact(name: name, age: age, about: about)
         
-        Contact.mockData.append(newContact)
+        self.saveContact(contact: newContact)
     
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    private func saveContact(contact: Contact) {
         
-        //    self.dismiss(animated: true, completion: nil)
+        let contactDetails = ContactDetails(context: CoreData.context)
+        
+        contactDetails.name = contact.name
+        contactDetails.age = Int16(contact.age)
+        contactDetails.about = contact.about
+        
+        do {
+            try CoreData.context.save()
+        } catch let error {
+            print("Error while saving new contact: \(error.localizedDescription)")
+        }
     }
     
     override func viewDidLoad() {
